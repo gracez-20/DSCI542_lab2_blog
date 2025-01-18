@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science"
+  title: "Data + Dollars"
   navbar:
     right:
       - about.qmd
