@@ -2,7 +2,7 @@
 title: "From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science"
 author: "Zhiwei Zhang"
 date: "2025-01-17"
-categories: [code, analysis]
+categories: [analysis, insight]
 image: "wine.jpg"
 ---
 
