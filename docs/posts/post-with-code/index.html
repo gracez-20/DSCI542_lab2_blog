@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
+<meta name="author" content="Zhiwei Zhang">
 <meta name="dcterms.date" content="2025-01-17">
 
-<title>Post With Code – From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science</title>
+<title>From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,9 +115,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post With Code</h1>
+      <h1 class="title">From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
                 <div class="quarto-category">code</div>
                 <div class="quarto-category">analysis</div>
               </div>
@@ -130,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>Zhiwei Zhang </p>
             </div>
     </div>
       
@@ -156,9 +155,134 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is a post with executable code.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="wine.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-caption="Source: https://www.pexels.com/photo/photo-of-wine-bottles-on-rack-2664149/ "></p>
+</figure>
+</div>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>The wine industry has long relied on tradition, intuition, and craftsmanship. However, with the rise of machine learning and data science, this centuries-old industry is entering a new era. By analyzing data, winemakers and distributors can optimize production, ensure quality, and better cater to consumers.</p>
+<p>In this blog, we’ll explore how machine learning techniques, such as supervised learning and regression models, are being used to enhance efficiency and drive innovation in the wine industry. Specifically, we’ll use the example of predicting wine color based on physiochemical properties, a project with wide-ranging implications for the industry.</p>
+<p>Let’s embark on this journey to understand how data science transforms the wine industry and provides actionable insights for both producers and consumers.</p>
+<hr>
+</section>
+<section id="the-role-of-machine-learning-in-wine-production" class="level1">
+<h1>The Role of Machine Learning in Wine Production</h1>
+<p>Machine learning is a powerful tool for making predictions and uncovering patterns in data. For example, consider the task of predicting wine color (red or white) based on chemical attributes like acidity, pH, and alcohol content. This application has several potential benefits:</p>
+<ul>
+<li><strong>Improving Inventory Management</strong>: Accurate predictions help wineries and retailers categorize and organize wines, ensuring proper storage and marketing.</li>
+<li><strong>Enhancing Quality Control</strong>: Machine learning models can detect misclassified or mislabeled wines, reducing errors before products reach consumers.</li>
+<li><strong>Streamlining Production Processes</strong>: Insights from data can guide winemakers in optimizing their recipes and processes, reducing costs and waste.</li>
+</ul>
+<hr>
+</section>
+<section id="recap-of-data-science-machine-learning-basics" class="level1">
+<h1>Recap of Data Science &amp; Machine Learning Basics</h1>
+<p>Before diving deeper into how machine learning is revolutionizing the wine industry, let’s take a moment to recap some basic concepts in data science and machine learning. This will help build a foundation for understanding the methods we’ll discuss later.</p>
+<section id="what-is-supervised-learning" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-supervised-learning">What is Supervised Learning?</h2>
+<p>Supervised learning is one of the most common types of machine learning. In this approach, the model learns from labeled data, which means each input (e.g., physiochemical properties of wine) is paired with a known output (e.g., wine color: red or white). The goal of supervised learning is to find a function that maps inputs to outputs as accurately as possible.</p>
+<p>Imagine you’re a student learning to recognize different types of fruits. If someone shows you a banana and tells you it’s a banana, and then does the same for an apple, you’ll eventually learn to identify these fruits yourself. This is essentially supervised learning—the model (you) is trained on examples with labels (fruit types) to make predictions on unseen examples.</p>
+<p>In the context of the wine industry, supervised learning can help predict wine characteristics, like color or quality, based on its chemical composition.</p>
+</section>
+<section id="what-is-a-regression-model" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-regression-model">What is a Regression Model?</h2>
+<p>Regression is a type of supervised learning used for predicting continuous outcomes. Unlike classification (e.g., red or white wine), regression models predict numerical values. For example:</p>
+<ul>
+<li>Predicting the alcohol content of a wine based on its acidity and sugar levels.</li>
+<li>Estimating the optimal harvest date based on weather patterns.</li>
+</ul>
+<p>Regression models try to fit a line (or curve) to the data that best represents the relationship between the inputs and outputs. A common example is linear regression, where the goal is to find a straight line that minimizes the difference between predicted and actual values. Suppose you’re trying to predict the price of a bottle of wine based on its age. The older the wine, the more expensive it typically is. Linear regression helps determine the exact relationship between age and price, allowing you to make predictions.</p>
+<hr>
+</section>
+</section>
+<section id="example-project-predicting-wine-color-using-physiochemical-properties" class="level1">
+<h1>Example Project: Predicting Wine Color Using Physiochemical Properties</h1>
+<section id="dataset-overview" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-overview">Dataset Overview</h2>
+<p>For this project, the dataset comes from the UCI Machine Learning Repository （https://archive.ics.uci.edu/dataset/186/wine+quality）. It contains data from approximately 6,500 samples of red and white wines. Each sample includes 11 physiochemical properties, such as Fixed Acidity, Volatile Acidity, Citric Acid, Residual Sugar, Alcohol Content.</p>
+<p>The target variable (the feature we want to predict) is wine color: red or white.</p>
+<p>Before diving into the model training, let’s take a closer look at the data distribution for some key features.</p>
+<p>Figure 1 reveals clear differences between red and white wines in key features. For example, red wines generally show higher volatile acidity (linked to tanginess) and citric acid levels, while white wines tend to have more residual sugar (contributing to sweetness) and free sulfur dioxide (used for preservation). Interestingly, alcohol content shows a slightly higher range for white wines, but red wines have lower pH (more acidic), which may influence color. While some features like quality and residual sugar show overlap between wine types, their interactions with other features improve the model’s ability to distinguish red from white wines.</p>
+<p><img src="feature_densities_by_class.png" class="img-fluid">{fig-align=“center” fig-caption=“Figure 1: Wine feature distribution with different colors. Image by author.“}</p>
+</section>
+<section id="step-by-step-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-workflow">Step-by-Step Workflow</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="steps.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-caption="Figure 2: Steps of Modeling. Image by author. "></p>
+</figure>
+</div>
+<section id="step1-data-preprocessing" class="level3">
+<h3 class="anchored" data-anchor-id="step1-data-preprocessing">Step1: Data Preprocessing</h3>
+<ol type="1">
+<li><strong>Data Cleaning</strong>: Removed duplicates and handled missing values. Ensured all features, like acidity and alcohol content, fell within realistic ranges.</li>
+<li><strong>Feature Standardization</strong>: Standardized all features to have a mean of 0 and a standard deviation of 1. This prevents features with larger scales from dominating the model.</li>
+<li><strong>Data Splitting</strong>: Split the dataset into 70% for training and 30% for testing to evaluate how the model performs on unseen data.</li>
+</ol>
+</section>
+<section id="step-2-model-selection" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-model-selection">Step 2: Model Selection</h3>
+<p>We used logistic regression, a simple yet effective supervised learning model, to predict wine color. Logistic regression works by estimating the probability of an event based on input features.</p>
+<p><strong>Why logistic regression?</strong> 1. Easy to implement and understand. 2. Provides feature importance, helping us interpret which properties are most relevant for predictions. 3. Suitable for binary classification tasks like this one.</p>
+</section>
+<section id="step-3-model-training-and-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-model-training-and-evaluation">Step 3: Model Training and Evaluation</h3>
+<ol type="1">
+<li><strong>Training the Model</strong>: The model was trained on the training set and fine-tuned using cross-validation, a technique to ensure it generalizes well to new data.</li>
+<li><strong>Evaluation</strong>: Tested the model on the remaining 30% of the data, using metrics like accuracy, precision, and recall. These are all metrics to evaluate how good the model perform. The closer to 1, the better the model perform on new datas.</li>
+</ol>
+<p><strong>Results:</strong></p>
+<ul>
+<li>Test accuracy: <strong>99.1%</strong> of predictions were correct.</li>
+<li>Precision and recall: Both exceeded <strong>98%</strong>, showing the model reliably distinguishes red and white wines.</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="applications-in-the-wine-industry" class="level1">
+<h1>Applications in the Wine Industry</h1>
+<p>Beyond predicting wine color, machine learning can revolutionize other aspects of the wine industry:</p>
+<ol type="1">
+<li><strong>Optimizing Harvesting</strong>:
+<ul>
+<li>By analyzing weather patterns and soil data, machine learning models can predict the best time to harvest grapes for maximum quality.</li>
+</ul></li>
+<li><strong>Flavor Profiling</strong>:
+<ul>
+<li>Using consumer feedback and chemical analysis, data science can help identify flavor profiles that appeal to different markets.</li>
+</ul></li>
+<li><strong>Supply Chain Management</strong>:
+<ul>
+<li>Predictive models can optimize distribution routes and inventory levels, reducing costs and ensuring timely deliveries.</li>
+</ul></li>
+<li><strong>Personalized Recommendations</strong>:
+<ul>
+<li>Just as streaming services recommend shows, machine learning can suggest wines tailored to individual preferences.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="challenges" class="level1">
+<h1>Challenges</h1>
+<p>While the opportunities are vast, adopting machine learning in the wine industry comes with challenges:</p>
+<ul>
+<li><strong>Data Quality</strong>: Inconsistent or incomplete data can hinder model performance.</li>
+<li><strong>Interpretability</strong>: Winemakers may hesitate to trust “black-box” models that lack transparency.</li>
+<li><strong>Integration</strong>: Combining traditional practices with data-driven methods requires a cultural shift.</li>
+</ul>
+<hr>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>The integration of data science into the wine industry marks an exciting chapter in its evolution. By leveraging machine learning, winemakers can optimize production, enhance quality, and cater to consumers more effectively. For Alex, a college student new to machine learning, this example showcases how theoretical concepts like supervised learning and regression models can solve real-world problems.</p>
+<p>As we’ve seen, data science doesn’t just provide answers—it opens new possibilities. The future of wine may still be rooted in tradition, but with the power of data, it’s becoming smarter and more efficient.</p>
+<hr>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

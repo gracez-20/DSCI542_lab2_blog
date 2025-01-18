@@ -12,8 +12,8 @@ about:
       href: https://linkedin.com
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/gracez-20
 
 ---
 
-About this blog
+Hi, I’m Zhiwei Zhang, but you can also call me Grace. I am a former commercial banker with both a bachelor’s and a master’s degree in Finance. During the first two years of my career, I worked in the finance industry, but I decided to make a significant change and pursue a Master of Data Science at UBC as a turning point. Currently, I am working hard to deepen my knowledge of machine learning while staying informed about market insights in the finance industry.

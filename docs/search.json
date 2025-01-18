@@ -4,27 +4,48 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "Hi, I’m Zhiwei Zhang, but you can also call me Grace. I am a former commercial banker with both a bachelor’s and a master’s degree in Finance. During the first two years of my career, I worked in the finance industry, but I decided to make a significant change and pursue a Master of Data Science at UBC as a turning point. Currently, I am working hard to deepen my knowledge of machine learning while staying informed about market insights in the finance industry."
   },
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Welcome to my Blog! This is a space that I share some insights and ideas about Data Sciences and Finance industry."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
+    "objectID": "posts/post-with-code/index.html#what-is-supervised-learning",
+    "href": "posts/post-with-code/index.html#what-is-supervised-learning",
+    "title": "From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science",
+    "section": "What is Supervised Learning?",
+    "text": "What is Supervised Learning?\nSupervised learning is one of the most common types of machine learning. In this approach, the model learns from labeled data, which means each input (e.g., physiochemical properties of wine) is paired with a known output (e.g., wine color: red or white). The goal of supervised learning is to find a function that maps inputs to outputs as accurately as possible.\nImagine you’re a student learning to recognize different types of fruits. If someone shows you a banana and tells you it’s a banana, and then does the same for an apple, you’ll eventually learn to identify these fruits yourself. This is essentially supervised learning—the model (you) is trained on examples with labels (fruit types) to make predictions on unseen examples.\nIn the context of the wine industry, supervised learning can help predict wine characteristics, like color or quality, based on its chemical composition."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#what-is-a-regression-model",
+    "href": "posts/post-with-code/index.html#what-is-a-regression-model",
+    "title": "From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science",
+    "section": "What is a Regression Model?",
+    "text": "What is a Regression Model?\nRegression is a type of supervised learning used for predicting continuous outcomes. Unlike classification (e.g., red or white wine), regression models predict numerical values. For example:\n\nPredicting the alcohol content of a wine based on its acidity and sugar levels.\nEstimating the optimal harvest date based on weather patterns.\n\nRegression models try to fit a line (or curve) to the data that best represents the relationship between the inputs and outputs. A common example is linear regression, where the goal is to find a straight line that minimizes the difference between predicted and actual values. Suppose you’re trying to predict the price of a bottle of wine based on its age. The older the wine, the more expensive it typically is. Linear regression helps determine the exact relationship between age and price, allowing you to make predictions."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#dataset-overview",
+    "href": "posts/post-with-code/index.html#dataset-overview",
+    "title": "From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science",
+    "section": "Dataset Overview",
+    "text": "Dataset Overview\nFor this project, the dataset comes from the UCI Machine Learning Repository （https://archive.ics.uci.edu/dataset/186/wine+quality）. It contains data from approximately 6,500 samples of red and white wines. Each sample includes 11 physiochemical properties, such as Fixed Acidity, Volatile Acidity, Citric Acid, Residual Sugar, Alcohol Content.\nThe target variable (the feature we want to predict) is wine color: red or white.\nBefore diving into the model training, let’s take a closer look at the data distribution for some key features.\nFigure 1 reveals clear differences between red and white wines in key features. For example, red wines generally show higher volatile acidity (linked to tanginess) and citric acid levels, while white wines tend to have more residual sugar (contributing to sweetness) and free sulfur dioxide (used for preservation). Interestingly, alcohol content shows a slightly higher range for white wines, but red wines have lower pH (more acidic), which may influence color. While some features like quality and residual sugar show overlap between wine types, their interactions with other features improve the model’s ability to distinguish red from white wines.\n{fig-align=“center” fig-caption=“Figure 1: Wine feature distribution with different colors. Image by author.“}"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#step-by-step-workflow",
+    "href": "posts/post-with-code/index.html#step-by-step-workflow",
+    "title": "From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science",
+    "section": "Step-by-Step Workflow",
+    "text": "Step-by-Step Workflow\n\n\n\n\n\n\nStep1: Data Preprocessing\n\nData Cleaning: Removed duplicates and handled missing values. Ensured all features, like acidity and alcohol content, fell within realistic ranges.\nFeature Standardization: Standardized all features to have a mean of 0 and a standard deviation of 1. This prevents features with larger scales from dominating the model.\nData Splitting: Split the dataset into 70% for training and 30% for testing to evaluate how the model performs on unseen data.\n\n\n\nStep 2: Model Selection\nWe used logistic regression, a simple yet effective supervised learning model, to predict wine color. Logistic regression works by estimating the probability of an event based on input features.\nWhy logistic regression? 1. Easy to implement and understand. 2. Provides feature importance, helping us interpret which properties are most relevant for predictions. 3. Suitable for binary classification tasks like this one.\n\n\nStep 3: Model Training and Evaluation\n\nTraining the Model: The model was trained on the training set and fine-tuned using cross-validation, a technique to ensure it generalizes well to new data.\nEvaluation: Tested the model on the remaining 30% of the data, using metrics like accuracy, precision, and recall. These are all metrics to evaluate how good the model perform. The closer to 1, the better the model perform on new datas.\n\nResults:\n\nTest accuracy: 99.1% of predictions were correct.\nPrecision and recall: Both exceeded 98%, showing the model reliably distinguishes red and white wines."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science",
+    "title": "Data + Dollars",
     "section": "",
-    "text": "Zhiwei Zhang\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 17, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 14, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 17, 2025\n\n\nZhiwei Zhang\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 14, 2025\n\n\nZhiwei Zhang\n\n\n\n\n\n\nNo matching items"
   }
 ]
