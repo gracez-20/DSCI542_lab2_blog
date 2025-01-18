@@ -9,7 +9,7 @@
 <meta name="author" content="Zhiwei Zhang">
 <meta name="dcterms.date" content="2025-01-17">
 
-<title>From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science</title>
+<title>From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science – Data + Dollars</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science</span>
+    <span class="navbar-title">Data + Dollars</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -117,8 +117,8 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title column-body">
       <h1 class="title">From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">code</div>
                 <div class="quarto-category">analysis</div>
+                <div class="quarto-category">insight</div>
               </div>
                   </div>
   </div>
@@ -157,7 +157,8 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="wine.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-caption="Source: https://www.pexels.com/photo/photo-of-wine-bottles-on-rack-2664149/ "></p>
+<p><img src="wine.jpg" class="img-fluid figure-img"></p>
+<figcaption>Source: https://www.pexels.com/photo/photo-of-wine-bottles-on-rack-2664149/</figcaption>
 </figure>
 </div>
 <section id="introduction" class="level1">
@@ -205,13 +206,19 @@ ul.task-list li input[type="checkbox"] {
 <p>The target variable (the feature we want to predict) is wine color: red or white.</p>
 <p>Before diving into the model training, let’s take a closer look at the data distribution for some key features.</p>
 <p>Figure 1 reveals clear differences between red and white wines in key features. For example, red wines generally show higher volatile acidity (linked to tanginess) and citric acid levels, while white wines tend to have more residual sugar (contributing to sweetness) and free sulfur dioxide (used for preservation). Interestingly, alcohol content shows a slightly higher range for white wines, but red wines have lower pH (more acidic), which may influence color. While some features like quality and residual sugar show overlap between wine types, their interactions with other features improve the model’s ability to distinguish red from white wines.</p>
-<p><img src="feature_densities_by_class.png" class="img-fluid">{fig-align=“center” fig-caption=“Figure 1: Wine feature distribution with different colors. Image by author.“}</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="feature_densities_by_class.png" class="img-fluid figure-img"></p>
+<figcaption>Wine feature distribution with different colors. Image by author.</figcaption>
+</figure>
+</div>
 </section>
 <section id="step-by-step-workflow" class="level2">
 <h2 class="anchored" data-anchor-id="step-by-step-workflow">Step-by-Step Workflow</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="steps.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-caption="Figure 2: Steps of Modeling. Image by author. "></p>
+<p><img src="steps.jpg" class="img-fluid figure-img"></p>
+<figcaption>Steps of Modeling. Image by author.</figcaption>
 </figure>
 </div>
 <section id="step1-data-preprocessing" class="level3">
