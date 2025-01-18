@@ -1,0 +1,15 @@
+---
+title: "From Data to Wine: Unlocking Efficiency in the Wine Industry Through Data Science"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+
+Zhiwei Zhang
