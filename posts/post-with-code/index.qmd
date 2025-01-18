@@ -63,11 +63,11 @@ Before diving into the model training, let’s take a closer look at the data di
 
 Figure 1 reveals clear differences between red and white wines in key features. For example, red wines generally show higher volatile acidity (linked to tanginess) and citric acid levels, while white wines tend to have more residual sugar (contributing to sweetness) and free sulfur dioxide (used for preservation). Interestingly, alcohol content shows a slightly higher range for white wines, but red wines have lower pH (more acidic), which may influence color. While some features like quality and residual sugar show overlap between wine types, their interactions with other features improve the model’s ability to distinguish red from white wines.
 
-![Wine feature distribution with different colors. Image by author.](feature_densities_by_class.png)
+![Figure 1: Wine feature distribution with different colors. Image by author.](feature_densities_by_class.png)
 
 ## Step-by-Step Workflow
 
-![Steps of Modeling. Image by author.](steps.jpg)
+![Figure 2: Steps of Modeling. Image by author.](steps.jpg)
 
 ### Step1: Data Preprocessing
 
